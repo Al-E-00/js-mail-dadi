@@ -42,5 +42,6 @@ for (let i = 0; i < 6; i++) {
     document.querySelector(".pcResults").innerHTML += (`<li class="my-3">${pcRandomNum}</li>`)
     document.querySelector(".userResult").innerHTML += (`<li class="my-3">${userRandomNum}</li>`)
 
-    const sumPcRandomNum = pcRandomNum +
+    const sumPcRandomNum = pcRandomNum[i] + pcRandomNum [i];
+    console.log(sumPcRandomNum);
 }
