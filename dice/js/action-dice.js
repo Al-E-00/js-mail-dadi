@@ -22,11 +22,14 @@ console.log(userRandomNum);
 //2. we need to compare the two numbers to find who have the highest
 
 if (pcRandomNum == userRandomNum) {
-    console.log ("You are even")
+    console.log ("Game ended in a draw");
+    document.getElementById("result").innerHTML = ("Game ended in a draw");
 }
 if (pcRandomNum > userRandomNum) {
-    console.log ("pc have won")
+    console.log ("Pc have won");
+    document.getElementById("result").innerHTML = ("Pc have won");
 } 
 if (pcRandomNum < userRandomNum) {
-    console.log ("user have won")
+    console.log ("User have won");
+    document.getElementById("result").innerHTML = ("User have won");
 }
