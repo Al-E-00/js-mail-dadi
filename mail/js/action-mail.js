@@ -23,12 +23,18 @@ document.querySelector(".btnCheckMail").addEventListener("click", function () {
 
     const trustedMail = ["pippobaudo@gmail.com", "troyesivan@hotmail.com", "strangerThingsOutIn4Days@gmail.com", "helloWorld@imnew.com", "javascriptIsDope(kindof)@gmail.com"];
 
+    let found = -1;
 
-    if (mail === trustedMail) {
-        document.querySelector(".printMessage").innerHTML = ("You re trusted, welcome!");
-    } else {
-        document.querySelector(".printMessage").innerHTML = ("GO AWAY!!")
+    for (let i = 0; i < trustedMail.length; i++) {
+        
+    if (trustedMail[i] == mail) {
+        found = i;
+        }
     }
-}
-)
 
+    if (found < 0) {
+        document.querySelector(".printMessage").innerHTML = ("GO AWAY!!")
+    } else {
+        document.querySelector(".printMessage").innerHTML = ("You re trusted, welcome!");
+    }
+})
