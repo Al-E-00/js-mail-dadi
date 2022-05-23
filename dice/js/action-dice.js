@@ -36,12 +36,13 @@ if (pcRandomNum < userRandomNum) {
 
 //let's do 6 match and print for each match the result 
 
+let pcRandomNum = Math.floor(Math.random() * 6) + 1;
+let userRandomNum = Math.floor(Math.random() * 6) + 1;
 for (let i = 0; i < 6; i++) {
-    const pcRandomNum = Math.floor(Math.random() * 6) + 1;
-    const userRandomNum = Math.floor(Math.random() * 6) + 1;
     document.querySelector(".pcResults").innerHTML += (`<li class="my-3">${pcRandomNum}</li>`)
     document.querySelector(".userResult").innerHTML += (`<li class="my-3">${userRandomNum}</li>`)
 
-    const sumPcRandomNum = pcRandomNum[i] + pcRandomNum [i];
-    console.log(sumPcRandomNum);
 }
+
+const sumPcRandomNum = (pcRandomNum + pcRandomNum);
+console.log(sumPcRandomNum);
