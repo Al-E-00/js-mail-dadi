@@ -13,8 +13,17 @@ const trustedMail = ["pippobaudo@gmail.com", "troyesivan@hotmail.com", "stranger
 
 let isValid = false;
 
-document.querySelector(".btnCheckMail").addEventListener("click", function () {
 
+
+
+document.querySelector(".btnCheckMail").addEventListener("click", function () {
+    //chceck if mail is valid
+    //it has to have @
+    if (mail.indexOf("@") === -1) {
+        document.querySelector(".printMessage").innerHTML = "Not valid email";
+    
+        return;
+    }
 
     for (let i = 0; i < trustedMail.length; i++) {
         
