@@ -36,9 +36,44 @@ if (pcRandomNum < userRandomNum) {
 
 //let's do 6 match and print for each match the result 
 
-for (let i = 0; i < 6; i++) {
+/* for (let i = 1; i <= 6; i++) {
     let pcRandomNum = Math.floor(Math.random() * 6) + 1;
     let userRandomNum = Math.floor(Math.random() * 6) + 1;
     document.querySelector(".pcResults").innerHTML += (`<li class="my-3">${pcRandomNum}</li>`)
     document.querySelector(".userResult").innerHTML += (`<li class="my-3">${userRandomNum}</li>`)
+} */
+
+
+
+
+/* ------------------------------------------------------ */
+
+const numeriUser = [];
+const numeriAi = [];
+const maxNum = 6;
+
+let sumNumUser = 0;
+let sumNumAi = 0;
+
+for (let i = 1; i <= maxNum; i++) {
+    // produce random num for each player
+    const randomNumberUser = Math.floor(Math.random()* maxNum) + 1;
+    const randomNumberAi = Math.floor(Math.random()* maxNum) + 1;
+
+    // push generated num
+    numeriUser.push(randomNumberUser);
+    numeriAi.push(randomNumberAi);
+
+    sumNumUser += randomNumberUser;
+    sumNumAi += randomNumberAi;
+}
+
+console.log(sumNumUser, sumNumAi);
+
+if(sumNumAi > sumNumUser) {
+    alert(`AI will dominate the world (User: ${sumNumUser} /AI: ${sumNumAi})`);
+} else if (sumNumUser > sumNumAi) {
+    alert(`Next time!!! (User: ${sumNumUser} /AI: ${sumNumAi})`);
+} else {
+    alert(`In a draw!!!(User: ${sumNumUser} /AI: ${sumNumAi})`)
 }
