@@ -8,33 +8,24 @@
 
 
 //1. Ask user mail
+const mail = document.getElementById("mailCheck");
+const trustedMail = ["pippobaudo@gmail.com", "troyesivan@hotmail.com", "strangerThingsOutIn4Days@gmail.com", "helloWorld@imnew.com", "javascriptIsDope(kindof)@gmail.com"];
+
+let isValid = false;
 
 document.querySelector(".btnCheckMail").addEventListener("click", function () {
 
-    const mail = document.getElementById("mailCheck").value
-    console.log(mail);
-
-    //2. check mail with access
-    /* 
-    -   create a Array with a list of trusted mails 
-    -   check if the inserted mail it's trusted
-    -   print message with the outcome
-    */
-
-    const trustedMail = ["pippobaudo@gmail.com", "troyesivan@hotmail.com", "strangerThingsOutIn4Days@gmail.com", "helloWorld@imnew.com", "javascriptIsDope(kindof)@gmail.com"];
-
-    let found = -1;
 
     for (let i = 0; i < trustedMail.length; i++) {
         
-    if (trustedMail[i] == mail) {
-        found = i;
+    if (trustedMail[i] === mail.value) {
+        isValid = true;
         }
     }
 
-    if (found < 0) {
-        document.querySelector(".printMessage").innerHTML = ("GO AWAY!!")
+    if (isValid === true) {
+        document.querySelector(".printMessage").innerHTML = (`<span class="text-primary">You re trusted, welcome!</span>`);
     } else {
-        document.querySelector(".printMessage").innerHTML = ("You re trusted, welcome!");
+        document.querySelector(".printMessage").innerHTML = (`<span class="text-danger">GO AWAY!!!</span>`);
     }
 })

@@ -11,17 +11,21 @@
     
     <main>
         <div class="container">
-            <h1 class="mb-4">Mail check</h1>
+            <h1 class="mb-4 text-center">Mail check</h1>
             <div class="row justify-content-center">
-                <div class="col">
-                    <label for="mailCheck">Mail checker</label>
-                    <input type="email" id="mailCheck" name="mailCheck" placeholder="Insert email" required>
-                    <button class="btn btn-primary btnCheckMail">Check</button>
+                <div class="col-md-8">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="mailCheck" name="mailCheck" placeholder="email@gmail.com" required>    
+                        <label for="mailCheck">Email address</label>
+                    </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary btn-block btnCheckMail">Check</button>
             </div>
             <div class="row my-5">
                 <div class="col">
                     <div>
-                        <h1 class="printMessage"></h1>
+                        <h1 class="printMessage text-center"></h1>
                     </div>
                 </div>
             </div>

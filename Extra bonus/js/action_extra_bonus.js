@@ -14,9 +14,7 @@ document.querySelector(".sendButton").addEventListener("click", function(){
         numCasualNumbers = Math.floor(Math.random() * i);
         document.getElementById("listCasualNum").innerHTML += (`<li class="my-3">${numCasualNumbers}</li>`);
     }
-        let myArr = String(numCasualNumbers).split("").map((numCasualNumbers)=>{
-            return Number(numCasualNumbers)
-        })
+        numCasualNumbers = numCasualNumbers - numCasualNumbers.length;
 
         console.log(myArr);
         /* let lastFive = numCasualNumbers.length - 2;
